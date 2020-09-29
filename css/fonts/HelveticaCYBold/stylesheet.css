@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Helvetica CY Bold';
+    src: url('HelveticaCYBold.eot');
+    src: local('Helvetica CY Bold'), local('HelveticaCYBold'),
+        url('HelveticaCYBold.eot?#iefix') format('embedded-opentype'),
+        url('HelveticaCYBold.woff2') format('woff2'),
+        url('HelveticaCYBold.woff') format('woff'),
+        url('HelveticaCYBold.ttf') format('truetype'),
+        url('HelveticaCYBold.svg#HelveticaCYBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+

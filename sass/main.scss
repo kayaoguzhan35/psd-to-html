@@ -1,0 +1,722 @@
+/* COLORS */
+$color-white: #ffffff;
+$color-black: #000000;
+$color-red: #ce1a1a;
+$color-dark-grey: #A9A9A9;
+
+$color-icons: #70777d;
+
+$color-header-heading: #494f55;
+$color-header-nav: #393e42;
+$color-header-nav-paragraph: #5b595c;
+
+$color-aphorism-bg: #616365;
+
+$color-skills: #939585;
+$color-skills-paragraph: #939585;
+$color-skills-bg: #393e42;
+$color-dotted-border: #2e3338;
+
+$color-blog-heading: #494f55;
+
+$color-contact-bg: #393e42;
+
+$color-to: #817d7f;
+$color-send: #8d9092;
+$color-hello: #d6d7d7;
+
+
+
+@font-face {
+    font-family: 'Helvetica';
+    src: url('fonts/Helvetica/Helvetica.eot');
+    src: local('fonts/Helvetica/Helvetica'),
+        url('fonts/Helvetica/Helvetica.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Helvetica/Helvetica.woff2') format('woff2'),
+        url('fonts/Helvetica/Helvetica.woff') format('woff'),
+        url('fonts/Helvetica/Helvetica.ttf') format('truetype'),
+        url('fonts/Helvetica/Helvetica.svg#Helvetica') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica-Bold';
+    src: url('fonts/Helvetica-Bold/Helvetica-Bold.eot');
+    src: local('fonts/Helvetica-Bold/Helvetica‭ ‬עבה'), local('Helvetica-Bold'),
+        url('fonts/Helvetica-Bold/Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Helvetica-Bold/Helvetica-Bold.woff2') format('woff2'),
+        url('fonts/Helvetica-Bold/Helvetica-Bold.woff') format('woff'),
+        url('fonts/Helvetica-Bold/Helvetica-Bold.ttf') format('truetype'),
+        url('fonts/Helvetica/-BoldHelvetica-Bold.svg#Helvetica-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica-Light';
+    src: url('fonts/Helvetica-Light/Helvetica-Light.eot');
+    src: local('Helvetica Light'), local('Helvetica-Light'),
+        url('fonts/Helvetica-Light/Helvetica-Light.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Helvetica-Light/Helvetica-Light.woff2') format('woff2'),
+        url('fonts/Helvetica-Light/Helvetica-Light.woff') format('woff'),
+        url('fonts/Helvetica-Light/Helvetica-Light.ttf') format('truetype'),
+        url('fonts/Helvetica-Light/Helvetica-Light.svg#Helvetica-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica-Oblique';
+    src: url('fonts/Helvetica-Oblique/Helvetica-Oblique.eot');
+    src: local('fonts/Helvetica-Oblique/Helvetica Oblique'), local('Helvetica-Oblique'),
+        url('fonts/Helvetica-Oblique/Helvetica-Oblique.eot?#iefix') format('embedded-opentype'),
+        url('fonts/Helvetica-Oblique/Helvetica-Oblique.woff2') format('woff2'),
+        url('fonts/Helvetica-Oblique/Helvetica-Oblique.woff') format('woff'),
+        url('fonts/Helvetica-Oblique/Helvetica-Oblique.ttf') format('truetype'),
+        url('fonts/Helvetica-Oblique/Helvetica-Oblique.svg#Helvetica-Oblique') format('svg');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica CY Plain';
+    src: url('fonts/HelveticaCYPlain/HelveticaCYPlain.eot');
+    src: local('fonts/HelveticaCYPlain/Helvetica CY Plain'), local('HelveticaCYPlain'),
+        url('fonts/HelveticaCYPlain/HelveticaCYPlain.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaCYPlain/HelveticaCYPlain.woff2') format('woff2'),
+        url('fonts/HelveticaCYPlain/HelveticaCYPlain.woff') format('woff'),
+        url('fonts/HelveticaCYPlain/HelveticaCYPlain.ttf') format('truetype'),
+        url('fonts/HelveticaCYPlain/HelveticaCYPlain.svg#HelveticaCYPlain') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Helvetica CY Bold';
+    src: url('fonts/HelveticaCYBold/HelveticaCYBold.eot');
+    src: local('fonts/HelveticaCYBold/Helvetica CY Bold'), local('HelveticaCYBold'),
+        url('fonts/HelveticaCYBold/HelveticaCYBold.eot?#iefix') format('embedded-opentype'),
+        url('fonts/HelveticaCYBold/HelveticaCYBold.woff2') format('woff2'),
+        url('fonts/HelveticaCYBold/HelveticaCYBold.woff') format('woff'),
+        url('fonts/HelveticaCYBold/HelveticaCYBold.ttf') format('truetype'),
+        url('fonts/HelveticaCYBold/HelveticaCYBold.svg#HelveticaCYBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Helvetica';
+    font-size: 16px;
+
+}
+.blog-cards::-webkit-scrollbar {
+  width: 10px;               /* width of the entire scrollbar */
+
+}
+
+.blog-cards::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0);        /* color of the tracking area */
+}
+
+.blog-cards::-webkit-scrollbar-thumb {
+  background-color: rgba(36, 35, 35, 0.801);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+  border-right: 100px solid rgba(221, 24, 24, 0);  /* creates padding around scroll thumb */
+  }
+
+
+a{
+    text-decoration: none!important;
+    color:$color-header-nav-paragraph !important;
+}
+
+/* COVER */
+.cover-img{
+    width: 100%;
+    height: 53vh;
+    background-size: cover; 
+    background-repeat: no-repeat;
+}
+
+/* HEADER START*/
+
+.section-header{
+    width: 100%;
+    margin: -15vh;
+    padding-bottom: 90px;
+    background-color: $color-white;
+
+    .header-img{
+    border: 12px solid $color-white;
+    overflow: hidden;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    float: right;
+    }
+
+    .about-nav{
+        margin-top: 330px;
+        margin-left: 220px;
+
+        .outside-dot{
+        background-color: $color-black;
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-black;
+        border-radius: 100%;
+        margin-left: -9px;
+        margin-bottom: 40px;    
+        
+            .nav-about-paragraph{
+            padding-left: 30px;
+            margin-top: -5px;
+            font-family: 'Helvetica';
+            color: $color-header-nav-paragraph;
+            }
+        }
+    }
+
+    .vertical-nav{
+    left: -10%;
+    border-left: 3px solid $color-header-nav;
+
+        .black-dot{
+        background-color: $color-white ;
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-black;
+        border-radius: 100%;
+        margin-left: -12px;
+        margin-bottom: 40px;
+
+
+
+            .nav-skills-paragraph{
+            padding-left: 30px;
+            margin-top: -5px;
+            font-family: 'Helvetica';
+            color: $color-header-nav-paragraph;
+            }
+
+            .nav-work-paragraph{
+            padding-left: 30px;
+            margin-top: -5px;
+            font-family: 'Helvetica';
+            color: $color-header-nav-paragraph;
+            }            
+            .nav-blog-paragraph{
+            padding-left: 30px;
+            margin-top: -5px;
+            font-family: 'Helvetica';
+            color: $color-header-nav-paragraph;
+            }
+            .nav-contact-paragraph{
+            padding-left: 30px;
+            margin-top: -5px;
+            font-family: 'Helvetica';
+            color: $color-header-nav-paragraph;
+            }            
+        }
+        
+    }
+
+    .paragraph-heading{
+    display: inline-block;
+    font-size: 40px;
+    margin-top: 45px;
+    padding-bottom: 80px;
+    color: $color-white;
+    font-family: 'Helvetica-Light',sans-serif;
+        
+        .job{
+           display: inline-block;
+            font-size: 20px;
+           font-weight: 300;
+           font-family: 'Helvetica-Light',sans-serif;
+       }        
+    }
+
+
+
+    .hello{
+        font-family: 'Helvetica-Bold',sans-serif;
+        font-size: 60px;
+        color: $color-header-heading;
+
+        .there{
+        font-family: 'Helvetica-Light',sans-serif;
+        font-size: 60px;
+        display: inline-block;
+        color: $color-header-heading;
+        }
+    }
+
+
+    .paragraph-about-1{
+    padding: 30px 0px;
+    }
+
+    .paragraph-about-2{
+    padding-bottom: 45px;
+    }
+
+    .signature{
+    float: right;
+    padding-bottom: 90px;
+    }
+
+    .social-icons{
+    color: $color-icons;
+    }
+
+    .fab{
+    padding-right: 5px;
+    }
+
+}
+/* HEADER END*/
+
+
+/* APHORİSM START*/
+.section-aphorism{
+    text-align: center;
+    font-size: 30px;
+    padding: 75px 50px 75px 50px ;
+    margin: 0 auto ;
+    letter-spacing: 3px;
+    line-height: normal;
+    background-color: $color-aphorism-bg;
+
+    .aphorism-paragraph{
+    padding-bottom: 30px;
+    font-family: 'Helvetica-Oblique',sans-serif;
+    color: $color-white;
+    }   
+
+    .writer-paragraph{
+    padding-right: 100px;
+    padding-bottom: 40px;
+    font-family: 'Helvetica',sans-serif;
+    float: right!important;
+    color: $color-white;
+    }
+
+}
+/* APHORİSM END*/
+
+
+/* SKILLS START*/
+
+.section-skills{
+    padding-top: 40px;
+    background-color: $color-skills-bg;
+
+    .skills-heading{
+    text-align: center;
+    color:  $color-white;
+    font-family: 'Helvetica-Light',sans-serif;
+    font-size: 30px;
+    padding: 25px 0 75px 0;
+    }
+
+    h3{
+    font-family: 'Helvetica-Bold',sans-serif;
+    color: $color-white;
+    }
+
+    h4{
+    font-family: 'Helvetica-Light',sans-serif;
+    color: $color-white;
+    }
+
+    .skills-paragraph{
+    font-size: 25px;
+    font-family: 'Helvetica-Bold',sans-serif;
+    padding: 80px 0 90px 0;
+    color: $color-skills-paragraph;
+
+        .underline{
+        color: $color-white!important;
+        text-decoration: underline!important;
+        }
+    }
+
+    .border-between{
+    padding-right:20px;
+    border-right: 5px dotted $color-dotted-border;
+    }
+
+    .circle-border{
+        width: 200px;
+        height: 200px;
+        border: 3px solid $color-skills;
+        border-radius: 100%;
+        margin: 30px auto;
+
+        .skills-img{
+         width: 100px;
+        color : $color-white;
+        margin-top: 40px;
+        }
+    }
+    
+}
+
+/* SKILLS END*/
+
+
+/* WORK START */
+
+.section-work{
+    
+    border-top: 2px solid $color-black;
+    border-bottom: 2px solid $color-black;
+    background: url(../img/work-bg.png);
+    background-repeat: none;
+    background-size: cover;
+
+    .work-heading{
+    font-family: 'Helvetica-Ligth',sans-serif;
+    text-align: center;
+    color:  $color-white;
+    font-size: 25px;
+    padding: 45px 0;
+    }
+
+    .padding{
+    padding-left: 50px;
+    padding-right: 90px;
+        
+        .work-img{
+        padding: 0  0 20px 20px;
+        }
+    }
+
+    .work-nav{
+        margin:auto;
+        width: 150px;
+        height: 90px;
+    
+
+        .horizontal-nav-1{
+            margin: 0px auto 50px  ;
+            width:50px;
+            position: relative;
+            border-bottom: 3px solid $color-white;
+            left: 2px;
+        }
+
+        .horizontal-nav-2{
+            margin: 0px auto 50px  ;
+            width:50px;
+            position: relative;
+            border-bottom: 3px solid $color-white;   
+            top: -79px;
+            left: 72px;         
+        }
+
+
+
+        .work-white-dot-dolu{
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-white;
+        border-radius: 100%;
+        left: -23px;
+        margin-left: -12px;
+        background-color: white; 
+        position: relative; 
+        top: 17px; 
+        display: inline-block;         
+        }
+
+        .work-white-dot-bos-1{
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-white;
+        border-radius: 100%;
+        margin-left: -12px;
+        top:17px;
+        left:34px;
+        display: inline-block;
+        position: relative;         
+        }
+
+        .work-white-dot-bos-2{
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-white;
+        border-radius: 100%;
+        margin-left: -12px;
+        top:-62px;
+        left:114px;
+        display: inline-block;
+        position: relative;  
+        }
+
+        .work-white-dot-bos-3{
+        width: 20px;
+        height: 20px;
+        border: 3px solid $color-white;
+        border-radius: 100%;
+        margin-left: -12px;
+        top:-140px;
+        left: 184px;
+        display: inline-block;
+        position: relative;              
+        }
+
+     
+        
+        
+    }
+
+}
+
+
+
+
+
+/* WORK END */
+
+/* BLOG START*/
+
+.section-blog{
+
+    .blog-heading{
+    font-family: 'Helvetica-Light';
+    font-size: 25px;
+    color: $color-blog-heading;
+    text-align: center;
+    padding: 50px 0px;
+    }
+
+    .blog-cards{
+    width: 100%;
+    height: 610px;
+    overflow: auto;
+    
+    /*
+    height: 81.16vh;
+    */
+    background-size: cover; 
+    background-repeat: no-repeat;
+    background-image: url(../img/blog-bg.jpg);
+    
+    .card-left{
+    margin-top: 56px;
+    margin-left: 250px;
+    width: 440px;
+    height: 205px;
+    -webkit-clip-path: polygon(0 0, 95% 0, 95% 45%, 100% 50%, 95% 55%, 95% 100%, 0 100%);
+    clip-path: polygon(0 0, 95% 0, 95% 45%, 100% 50%, 95% 55%, 95% 100%, 0 100%);
+    /*
+    clip-path: polygon(0 0, 95% 0, 95% 45%, 100% 50%, 95% 55%, 95% 100%, 0 100%);
+    */
+    }
+
+    .timeline{
+    left: -8%;
+    border-right: 3px solid $color-white;
+        
+        .white-dot{
+        font-family: 'Helvatica CY Plain',sans-serif;
+        font-size: 19px;
+        background-color:white;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        }
+
+        .first-dot{
+        top: 17%;
+        right: -11%;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;
+        }
+
+        .second-dot{
+        top: 32%;
+        right: -11%;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;
+        }
+
+        .third-dot{
+        top: 49.4%;
+        right: -11%;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;        
+        }
+
+        .fourth-dot{
+        top: 67%;
+        right: -11%;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;
+        }
+
+        .fifth-dot{
+        top: 82%;
+        right: -11%;
+        position: absolute;
+        text-align: center;
+        padding-top: 11px;        
+        }
+    }
+
+
+
+    /*
+    .timeline-circle{
+        border: 1px solid $color-white;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        top: -25%;
+    }
+    */
+
+    .card-right{
+    padding-left: 10px;
+    margin-top: 80px;
+    margin-left: 210px;
+    width: 440px;
+    height: 205px;
+    -webkit-clip-path: polygon(5% 45%, 5% 0, 100% 0, 100% 100%, 5% 100%, 5% 55%, 0 50%);
+    clip-path: polygon(5% 45%, 5% 0, 100% 0, 100% 100%, 5% 100%, 5% 55%, 0 50%);
+    }
+
+    .card-img{
+    height: fit-content;
+    }
+
+    .card-title{
+    font-size: 16px;
+    font-family: 'Helvetica-Bold',sans-serif;
+    }
+
+    .card-text{
+    font-size: 12px;
+    font-family: 'Helvetica',sans-serif;
+    }
+
+    .left-side{
+    left: 0%;
+    }
+
+    .right-side{
+    right: 48%;
+    
+    }
+
+    .btn-right{
+    float: right;
+    font-family: 'Helvetica',sans-serif;
+    }
+
+    .btn-left{
+    margin-left: -10px;
+    font-family: 'Helvetica',sans-serif;
+    }
+
+    }
+
+
+}
+
+/* BLOG END*/
+
+/* CONTACT START */
+
+.section-contact{
+    padding: 50px 0px 100px 0px;
+    background-color: $color-contact-bg;
+    z-index: 1000;
+    position: relative;
+
+    .contact-heading{
+    color:  $color-white;
+    font-size: 25px;
+    text-align: center;
+    padding-bottom: 60px;
+    }
+
+    .paragrapgh-send{
+    float: left;
+    }
+
+    .map{
+    float: right;
+    margin-top: 20px;
+    height: 250px;
+    }
+
+    .location{
+    position: absolute;
+    left: 62%;
+    top: 10%;
+    color: $color-white;
+
+        .live{
+        font-size: 16px;
+        font-family: 'Helvetica CY Bold',sans-serif;
+        }
+
+        .city{
+        font-size: 22px;
+        font-family: 'Helvetica CY Bold',sans-serif;
+        }
+    }
+
+    .paragraph-to{
+    color: $color-to;
+    font-size: 20px;
+    }
+
+    .paragraph-email{
+    color: $color-white;
+    font-size: 25px;
+    }
+
+    .paragraph-hello{
+    color: $color-hello;
+    font-size: 20px;
+    }
+
+    .paragraph-send{
+    padding-top: 20px;
+    width: 12%;
+    float: right;
+    color: $color-red;
+    }
+
+    .borders{
+    width: 95%;
+    border-top: 1px solid $color-white;
+    padding: 10px 0 40px 0;
+    }
+
+}
+
+/* FOOTER END */
+
+
